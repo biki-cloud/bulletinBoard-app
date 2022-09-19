@@ -7,15 +7,15 @@
 <body>
 
     <h1 th:text="${greeingMessage}"></h1>
+    <h2 th:text="#{foo.message}"></h2>
+
+<!--    th:insert-->
+<!--    個別に記述したhtmlを読み込み、このhtmlへ埋め込む。-->
+<!--    下記はcontentAdd.htmlを埋め込んでいる。-->
 
     <div th:insert="contentAdd"></div>
 
     <div th:insert="contentTable"></div>
 
-    <table>
-        <tr th:if="${validationError}" th:each="error : ${validationError}">
-            <td style="color: red;" th:text="${error}"></td>
-        </tr>
-    </table>
 </body>
 </html>
