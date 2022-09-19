@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bulletin Board</title>
+</head>
+<body>
+
+    <h1 th:text="${greeingMessage}"></h1>
+
+    <div th:insert="contentAdd"></div>
+
+    <div th:insert="contentTable"></div>
+
+    <table>
+        <tr th:if="${validationError}" th:each="error : ${validationError}">
+            <td style="color: red;" th:text="${error}"></td>
+        </tr>
+    </table>
+</body>
+</html>

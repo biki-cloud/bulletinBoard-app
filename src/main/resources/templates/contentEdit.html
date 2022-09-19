@@ -1,0 +1,17 @@
+<form th:action="@{/update}" th:object="${content}"
+      method="post">
+    <input type="hidden" th:field="*{id}">
+
+    <label for="name">name</label>
+    <input type="text" th:field="*{name}">
+    <small style="color: red" th:errors="*{name}"></small>
+
+    <label for="comment">comment</label>
+    <input type="text" th:field="*{comment}">
+    <small style="color: red" th:errors="*{comment}"></small>
+
+    <input type="hidden" th:field="*{createdDate}">
+    <input type="hidden" th:field="*{updatedDate}">
+
+    <button type="submit">保存</button>
+</form>
