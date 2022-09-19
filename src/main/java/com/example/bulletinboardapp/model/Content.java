@@ -28,5 +28,13 @@ public class Content {
     private String comment;
 
     private Date createdDate;
-    private Date updatedDate;
+
+    public Content(Long id, String name, String comment, Date createdDate) {
+        this.id = id;
+        this.name = name;
+        this.comment = comment;
+        this.createdDate = createdDate;
+    }
+
+    public Content(){};
 }

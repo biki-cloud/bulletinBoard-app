@@ -24,7 +24,6 @@ public class ContentRepositoryTests {
         content.setName("biki");
         content.setComment("something");
         content.setCreatedDate(new Date());
-        content.setUpdatedDate(new Date());
 
         Content savedContent = repository.save(content);
 
