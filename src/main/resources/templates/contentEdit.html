@@ -1,3 +1,16 @@
+<!--th:field-->
+<!--フィールドを設定する。-->
+<!--設定したタグのid,name,value属性を一気に設定する。-->
+<!--例えば、<p th:field="*{id}">を設定したら下記のようになる。-->
+<p id="id" name="id" value="id">
+
+
+<!--th:action-->
+
+<!--th:errors-->
+<!--バリデーションなどのエラーがある場合にエラーメッセージを表示する-->
+
+
 <form th:action="@{/update}" th:object="${content}"
       method="post">
     <input type="hidden" th:field="*{id}">

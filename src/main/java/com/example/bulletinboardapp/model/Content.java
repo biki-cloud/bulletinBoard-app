@@ -11,16 +11,21 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.Date;
 
+// @Getter
+// 記述することでコードには書いていないが、暗黙的に全てのプロパティにゲッターを付与する。
 @Getter
+// @Setter
+// 記述することでコードには書いていないが、暗黙的に全てのプロパティにセッターを付与する。
 @Setter
+// @Entity
 @Entity
 public class Content {
     @Id
     @GeneratedValue
     private Long id;
 
-    @NotBlank
-    @Size(max = 20)
+    @NotBlank // これを指定することでフォームなどで入力された値に対してバリデーションチェックが実装される
+    @Size(max = 20) // バリデーションチェック
     private String name;
 
     @NotBlank
