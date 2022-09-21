@@ -28,12 +28,6 @@ public class ContentController {
         this.contentService = contentService;
     }
 
-    @GetMapping
-    public List<Content> getContents() {
-        return contentService.getContent();
-    }
-
-
     @GetMapping("/")
     public String home(Model model, @ModelAttribute Content content) {
         return contentService.home(model, content);
