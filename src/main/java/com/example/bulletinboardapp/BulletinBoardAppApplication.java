@@ -8,7 +8,6 @@ import org.springframework.context.support.ResourceBundleMessageSource;
 
 @SpringBootApplication
 public class BulletinBoardAppApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(BulletinBoardAppApplication.class, args);
     }
