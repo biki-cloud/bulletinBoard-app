@@ -11,10 +11,10 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
-@Configuration
+@Configuration // 構成(設定)クラスであることを示す。
 public class SecurityConfig {
 
-    @Bean
+    @Bean // Spring(IOCコンテナ)に管理されるBeanの生成を示す。
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
