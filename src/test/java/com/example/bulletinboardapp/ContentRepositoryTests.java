@@ -4,6 +4,7 @@ package com.example.bulletinboardapp;
 import com.example.bulletinboardapp.model.Content;
 import com.example.bulletinboardapp.repository.ContentRepository;
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -16,9 +17,11 @@ import java.util.Date;
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @Rollback(value = false)
 public class ContentRepositoryTests {
+    // repositoryをDIする
     @Autowired private ContentRepository repository;
 
-    @Test
+    @DisplayName("ContentRepositoryのテストを行う")
+    @Test // テストを実施する関数に付与する。
     public void testAddNew() {
         Content content =  new Content();
         content.setName("biki");
